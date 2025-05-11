@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chúc Mừng Sinh Nhật</title>
+    <title>Viết Lời Chúc</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Chào Mừng Đến Với Lời Chúc Sinh Nhật!</h1>
-        <button onclick="navigateTo('welcome.html')">Bắt Đầu</button>
+        <h1>Viết Lời Chúc Sinh Nhật</h1>
+        <textarea id="birthdayMessage" placeholder="Nhập lời chúc của bạn..."></textarea>
+        <button onclick="saveMessage()">Gửi Lời Chúc</button>
     </div>
     <script src="script.js"></script>
 </body>
