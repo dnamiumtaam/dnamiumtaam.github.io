@@ -1,90 +1,13 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(45deg, #ff6b6b, #ffe66d);
-    font-family: Arial, sans-serif;
-    overflow: hidden;
-}
-
-.container {
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-}
-
-h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+.text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-p {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 1.2em;
-    background: #ff4757;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-
-textarea {
-    width: 80%;
-    max-width: 400px;
-    height: 100px;
-    margin: 20px 0;
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: none;
-}
-
-.balloons {
+canvas {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
-    pointer-events: none;
-}
-
-.balloon {
-    position: absolute;
-    width: 50px;
-    height: 70px;
-    background: #ff4757;
-    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-    animation: float 6s ease-in-out infinite;
-    opacity: 0.8;
-}
-
-.balloon:nth-child(2) {
-    background: #1e90ff;
-    animation-duration: 5s;
-}
-
-.balloon:nth-child(3) {
-    background: #2ed573;
-    animation-duration: 7s;
-}
-
-@keyframes float {
-    0% { transform: translateY(100vh) scale(1); }
-    100% { transform: translateY(-100vh) scale(1.2); }
+    width: 100%;
+    height: 100%;
 }
 
 .confetti {
@@ -99,4 +22,27 @@ textarea {
 @keyframes confetti {
     0% { transform: translateY(0) rotate(0deg); opacity: 1; }
     100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #ff4757;
+    border-radius: 50%;
+    animation: firework 1s ease-out forwards;
+}
+
+@keyframes firework {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(10); opacity: 0; }
+}
+
+.login-input {
+    width: 80%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
 }
